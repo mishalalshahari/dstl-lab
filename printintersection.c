@@ -19,6 +19,6 @@ int main(){
             if(A[i]==B[j]) printf(" %d,",A[i]);
         }
     }
-    printf("\b}");
+    printf("\b }");
     return 0;
 }

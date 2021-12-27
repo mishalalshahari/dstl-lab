@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(){
+    int a[2][2], b[2][2], c[2];
+    int i, j;
+    for (i = 0; i <= 1; i++){
+        for (j = 0; j <= 1; j++){
+            a[i][j] = (i && j);
+            b[i][j] = (i || j);
+        }
+    }
+    for (i = 0; i <= 1; i++) c[i] = (!i);
+    printf("\nThe Truth Table for AND ( && ) is:\n\n");
+    printf("\tA\tB\tA&&B\n\n");
+    for (i = 0; i <= 1; i++){
+        for (j = 0; j <= 1; j++){
+            printf("\t%d\t%d\t%d\n",i,j,a[i][j]);
+        }
+    }
+    printf("\nThe Truth Table for OR ( || ) is:\n\n");
+    printf("\tA\tB\tA||B\n\n");
+    for (i = 0; i <= 1; i++){
+        for (j = 0; j <= 1; j++){
+            printf("\t%d\t%d\t%d\n",i, j, b[i][j]);
+        }
+    }
+    printf("\nThe Truth Table for NOT ( ~ ) is:\n\n");
+    printf("\tA\t!A\n\n");
+    for (i = 0; i <= 1; i++){
+        printf("\t%d\t%d\n", i, c[i]);
+    }
+}
